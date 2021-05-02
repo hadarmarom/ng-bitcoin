@@ -1,0 +1,6 @@
+<a routerLink="/edit">Add Contact</a>
+<form class="contact-filter">
+    <label for="name">Search contact: </label>
+    <input type="text" name="name" id="name" placeholder="Name" (input)="onFilter()" [(ngModel)]="filterBy.name">
+</form>
+<BitcoinList [contacts]="contacts$|async"></BitcoinList>

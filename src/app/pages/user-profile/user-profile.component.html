@@ -1,0 +1,17 @@
+<div>
+    <form *ngIf="!user" class="signup" (submit)="signUp()">
+        <label for="username">Sign Up: </label>
+        <input type="text" name="username" id="username" placeholder="username" [(ngModel)]="username">
+        <button>Sign-Up</button>
+    </form>
+    <div *ngIf="user">
+        <h1>Hello, {{user.name}}.</h1>
+        <p>{{user.coins}}</p>
+        <p>Rate: {{rate}}</p>
+        <ul *ngIf="user.moves.length">
+            <li *ngFor="let move of user.moves; index as idx">
+                <p>Contact: {{move.to}}, amount: {{move.amount}}</p>
+            </li>
+        </ul>
+    </div>
+</div>

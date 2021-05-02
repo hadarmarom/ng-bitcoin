@@ -1,0 +1,10 @@
+<p>{{contact|json}}</p>
+<form (submit)="saveContact()" class="contact-edit">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" placeholder="name" [(ngModel)]="contact.name">
+    <label for="phone">Phone</label>
+    <input type="number" name="phone" id="phone" placeholder="phone" [(ngModel)]="contact.phone">
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" placeholder="email" [(ngModel)]="contact.email">
+    <button>Save</button>
+</form>

@@ -1,0 +1,21 @@
+<section>
+    <p>contact-details works!</p>
+    <img [src]="'https://i.pravatar.cc/150?u=' + contact._id" alt="contact">
+    <h1>{{contact.name}}</h1>
+    <h3>Coins: {{contact.coins}}</h3>
+    <h3>{{contact.email}}</h3>
+    <h3>{{contact.phone}}</h3>
+    <a [routerLink]="['/edit',contact._id]">Edit</a>
+    <button (click)="onDeleteContact(contact._id)">Delete Contact</button>
+    <br>
+    <a [routerLink]="['']">Back</a>
+
+    <div *ngIf="user">
+        <h3>Transfer Coins</h3>
+        <form class="signup" (submit)="onTransferCoins(contact._id)">
+            <label for="amount">Amount: </label>
+            <input type="number" name="amount" id="amount" placeholder="amount" [(ngModel)]="amount">
+            <button>Transfer</button>
+        </form>
+    </div>
+</section>

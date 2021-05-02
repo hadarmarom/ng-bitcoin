@@ -1,0 +1,5 @@
+<div class="contact-List">
+    <a [routerLink]="['/contact',contact._id]" *ngFor="let contact of contacts;index as idx" trackBy="trackByFn">
+        <BitcoinPreviewComponent [contact]="contact"></BitcoinPreviewComponent>
+    </a>
+</div>

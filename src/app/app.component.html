@@ -1,0 +1,10 @@
+<main class="app-container">
+    <nav class="nav-app">
+        <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+        <div>
+            <a routerLink="/signin" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Sign In</a>
+        </div>
+    </nav>
+    <router-outlet></router-outlet>
+    <notifier-container></notifier-container>
+</main>
